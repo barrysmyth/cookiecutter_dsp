@@ -1,8 +1,10 @@
-Data Science in Practice Cookiecutter Template
+{{cookiecutter.project_name}}
 ==============================
 
-A cookiecutter template for a Python data science project, which creates a logical project structure with sections for data, notebooks, source code, and publications/reports, as below.
+{{cookiecutter.description}}
 
+Project Organization
+------------
 ```
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
