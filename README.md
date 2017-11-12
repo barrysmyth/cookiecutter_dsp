@@ -5,31 +5,30 @@ A cookiecutter template for a Python data science project, which creates a logic
 
 ```
 ├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── environment.yaml   <- Environment specification/dependencies to help reproducibility.
-│                         Generated with `conda env export > environmet.yaml`
+├── Makefile           <- Including `make data` or `make train` etc.
+├── README.md          <- Project README.
+├── environment.yaml   <- Python dependencies to help.
+│
 ├── data
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   ├── final          <- Final data ready for export.
-│   └── raw            <- The original, immutable data dump.
+│   ├── raw            <- The original, immutable data dump.
+│   ├── processed      <- Processed datasets.
+│   └── final          <- Final data ready for export.
 │
 ├── notebooks          <- Jupyter notebooks.
-│   ├── prep           <- Notebooks used for cleaning, preparing and wrangling data.
+│   ├── prep           <- Notebooks used for wrangling data.
 │   ├── analysis       <- Core analysis notebooks.
 │   └── final          <- Clean, final notebooks.
 │
 ├── pubs               <- Analysis reports/publications
 │   ├── tex            <- .tex files for pubs.
 │   ├── figs           <- Pub/report figures.
-│   └── data           <- Backup data associated with figs/tables in pubs.
+│   └── data           <- Data for figs/tables in pubs.
 │
 ├── src                <- Source code for use in this project.
 │   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
+│   ├── data           <- Scripts to download or generate data.
 │   ├── helpers        <- Other helper code.
 │   └── viz            <- Visualisation/graphing code.
 │
-├── docs               <- Project documentation; how to run/reproduce results.
+├── docs               <- Project documentation.
 ```
