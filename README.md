@@ -30,4 +30,6 @@ A cookiecutter template for a Python data science project, which creates a logic
 │   ├── data           <- Scripts to download or generate data
 │   ├── helpers        <- Other helper code.
 │   └── viz            <- Visualisation/graphing code.
+│
+├── docs               <- Project documentation; how to run/reproduce results.
 ```
