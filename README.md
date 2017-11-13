@@ -1,4 +1,4 @@
-Data Science in Practice Cookiecutter Template
+Data Science in Practice, Cookiecutter Template
 ==============================
 
 A cookiecutter template for a Python data science project, which creates a logical project structure with sections for data, notebooks, source code, and publications/reports, as below.
