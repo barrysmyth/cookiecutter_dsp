@@ -7,7 +7,7 @@ Project Organization
 ------------
 ```
 ├── LICENSE
-├── Makefile           <- Including `make data` or `make train` etc.
+├── Makefile           <- Tope-level Makefile.
 ├── README.md          <- Project README.
 ├── environment.yaml   <- Python dependencies to help.
 │
@@ -22,10 +22,12 @@ Project Organization
 │   └── final          <- Clean, final notebooks.
 │
 ├── pubs               <- Analysis reports/publications
-│   ├── tex            <- .tex files for pubs.
-│   ├── figs           <- Pub/report figures.
-│   └── data           <- Data for figs/tables in pubs.
-│
+│   ├── title1         <- Files for a single publication
+|   |   ├── type       <- Source for publication (e.g. tex, md)
+│   |   ├── figs       <- Pub/report figures.
+│   |   └── data       <- Data for figs/tables in pubs.
+│   └── title2         <- Files for a single publication
+|         :
 ├── src                <- Source code for use in this project.
 │   ├── __init__.py    <- Makes src a Python module
 │   ├── data           <- Scripts to download or generate data.
