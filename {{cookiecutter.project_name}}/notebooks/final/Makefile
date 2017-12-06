@@ -8,31 +8,37 @@
 
 .PHONY : run, compile, clean, all
 
+dir := $(lastword $(notdir $(patsubst %/,%, $(CURDIR))))
+
 nbs = $(wildcard *.ipynb)    # The .ipynb files in directory.
 scripts = $(nbs:.ipynb=.py)  # The corresponding .py scripts.
 
 # Compile notebooks into python scripts: *.ipynb -> *.py
-ifeq ($(nbs),)
-	@echo No notebooks to compile
+compile: $(nbs)
+ifeq ($(strip $(nbs)),)
+	@echo No notebooks to compile in $(dir).
 else
-	@echo Compiling data prep notebooks.
+	@echo Compiling notebooks in $(dir).
 	jupyter nbconvert --to script $^
 endif
 
 # Run python scripts; need to use a foreach to run each separately.
 run: $(scripts)
-ifeq ($(scripts),)
-	@echo No scripts to run.
+ifeq ($(strip $(nbs)),)
+	@echo No scripts to run in $(dir).
 else
-	@echo Running data prep notebook scripts.
+	@echo Running notebook scripts in $(dir).
 	$(foreach script,$(scripts), python $(script);)
 endif
 
 # Clean up; remove any scripts derived from a notebook.
 clean: $(scripts)
-	@echo Cleaning up notebook scripts.
-	$(info Removing scripts.)
+ifeq ($(strip $(nbs)),)
+	@echo No scripts to cleanup in $(dir).
+else
+	@echo Cleaning up notebook scripts in $(dir).
 	rm $^
+endif
 
 # make all to compile, run, and clean.
 all: compile run clean
