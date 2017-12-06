@@ -1,6 +1,8 @@
 {
-    "project_name": "",
-    "author_name": "",
-    "author_email": "",
-    "project_description": ""
+    "project_name": "Your project name",
+    "author_name": "Your name",
+    "author_email": "Your email",
+    "project_description": "A short project description",
+    "publication_title": "A publication/report title; created as a folder in pubs/.",
+    "publication_type": "E.g. Latex, Word, Markdown"
 }
